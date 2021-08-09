@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.0-rc1" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0-rc1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CoreLogic\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GeneralViewModel\GeneralViewModel.csproj" />
+    <ProjectReference Include="..\TypesGallery\TypesGallery.csproj" />
+    <ProjectReference Include="..\Views\AvaloniaUI\AvaloniaUI\View.AvaloniaUI.csproj" />
+    <ProjectReference Include="..\Views\WinForms\View.WinForms.csproj" />
+  </ItemGroup>
+
+</Project>

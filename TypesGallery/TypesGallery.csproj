@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{492C9D16-97BC-4CD0-9DD6-C9A376760EE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cryptosoft.TypesGallery</RootNamespace>
+    <AssemblyName>TypesGallery</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)\bin\Platform Independent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)\bin\Platform Independent\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseTypes\Data\Bindings\BindingSite.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\DataTemplate.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\HierarchicalDataTemplate.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\DataTemplateSelector.cs" />
+    <Compile Include="BaseTypes\Data\Converters\EnumerableToStringConverter.cs" />
+    <Compile Include="BaseTypes\Data\Converters\PercentToIntegerConverter.cs" />
+    <Compile Include="BaseTypes\Dispatcher.cs" />
+    <Compile Include="BaseTypes\Disposable.cs" />
+    <Compile Include="BaseTypes\DisposableMutex.cs" />
+    <Compile Include="BaseTypes\IObjectsSwap.cs" />
+    <Compile Include="BaseTypes\RangeIntCollection.cs" />
+    <Compile Include="DataCodex\Codex.cs" />
+    <Compile Include="DataCodex\GuidelineName.cs" />
+    <Compile Include="DataCodex\Guideline.cs" />
+    <Compile Include="DataCodex\ICodex.cs" />
+    <Compile Include="DataCodex\OperationState.cs" />
+    <Compile Include="Events\CollectionChangedEventManager.cs" />
+    <Compile Include="BaseTypes\Data\Collections\CollectionView.cs" />
+    <Compile Include="BaseTypes\Data\Collections\CollectionViewSource.cs" />
+    <Compile Include="BaseTypes\Data\Collections\CurrentChangingEventHandler.cs" />
+    <Compile Include="BaseTypes\Data\Collections\GroupDescription.cs" />
+    <Compile Include="BaseTypes\Data\Collections\ICollectionView.cs" />
+    <Compile Include="BaseTypes\Data\Collections\IndexedCollection.cs" />
+    <Compile Include="BaseTypes\Data\Collections\IObservableCollection%28Of T%29.cs" />
+    <Compile Include="Events\IWeakEventListener.cs" />
+    <Compile Include="BaseTypes\Data\Collections\ListCollectionView.cs" />
+    <Compile Include="BaseTypes\Data\Collections\SortDescription.cs" />
+    <Compile Include="BaseTypes\Data\Collections\SortDescriptionCollection.cs" />
+    <Compile Include="Events\PropertyChangedEventManager.cs" />
+    <Compile Include="Events\WeakEventTable.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\CommandBinding.cs" />
+    <Compile Include="Commands\CommandDescriptor.cs" />
+    <Compile Include="Commands\CommandHistoryItem.cs" />
+    <Compile Include="Commands\CommandManager.cs" />
+    <Compile Include="Commands\CommandTargetSite.cs" />
+    <Compile Include="Commands\DataCommands.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\ICommandTarget.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\Binding.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\BindingMode%28enum%29.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\BindingPath.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\BindingPathElement.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\BindingPathPropertyElement.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\BindingPathIndexerElement.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\InvalidPathException.cs" />
+    <Compile Include="BaseTypes\Data\Bindings\PathNotResolvedException.cs" />
+    <Compile Include="Events\IRoutedEventsNode.cs" />
+    <Compile Include="Events\RoutedEvent.cs" />
+    <Compile Include="Events\RoutedEventArgs.cs" />
+    <Compile Include="Events\RoutedEventSite.cs" />
+    <Compile Include="BaseTypes\IMetadataPropertyStore.cs" />
+    <Compile Include="BaseTypes\IPropertyStore.cs" />
+    <Compile Include="BaseTypes\ITypesFactory.cs" />
+    <Compile Include="BaseTypes\IValueConverter.cs" />
+    <Compile Include="Log\SimpleSyncLogToFileListener.cs" />
+    <Compile Include="MathOperations.cs" />
+    <Compile Include="Messages\Choice.cs" />
+    <Compile Include="Messages\ChoiceCollection.cs" />
+    <Compile Include="Messages\MessageResult.cs" />
+    <Compile Include="Messages\UiInteraction.cs" />
+    <Compile Include="Messages\UiMessageEventArgs.cs" />
+    <Compile Include="MVPVM\IBusinesLogicLayer.cs" />
+    <Compile Include="MVPVM\IDesktopLifetime.cs" />
+    <Compile Include="MVPVM\IPresenter.cs" />
+    <Compile Include="MVPVM\IView.cs" />
+    <Compile Include="MVPVM\IViewModel.cs" />
+    <Compile Include="MVPVM\PresenterBase.cs" />
+    <Compile Include="MVPVM\ViewModelBase.cs" />
+    <Compile Include="Operation\Operation.cs" />
+    <Compile Include="Operation\OperationElement.cs" />
+    <Compile Include="Operation\OperationStore.cs" />
+    <Compile Include="Operation\SimpleProgress of T.cs" />
+    <Compile Include="BaseTypes\TypesFactory.cs" />
+    <Compile Include="BlocksStream.cs" />
+    <Compile Include="CryptoNativesForHash.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="EventArgsT.cs" />
+    <Compile Include="FileCopyHelper.cs" />
+    <Compile Include="HashProvider.cs" />
+    <Compile Include="HashStream.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="IpAddressHelper.cs" />
+    <Compile Include="Log\ConsoleOutputTraceListener.cs" />
+    <Compile Include="Log\IWaitable.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogToFileListener.cs" />
+    <Compile Include="Log\MultipleTextFileWriter.cs" />
+    <Compile Include="Log\QpOsJournalListener.cs" />
+    <Compile Include="MarshalHelper.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="Resources\ResourceUri.cs" />
+    <Compile Include="ServiceHelper.cs" />
+    <Compile Include="ServicesExceptions.cs" />
+    <Compile Include="StepsManager.cs" />
+    <Compile Include="RegistryHelper.cs" />
+    <Compile Include="SequenceHelper.cs" />
+    <Compile Include="PrintHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamHelper.cs" />
+    <Compile Include="StringParseHelper.cs" />
+    <Compile Include="SystemOperationsHelper.cs" />
+    <Compile Include="TagAction.cs" />
+    <Compile Include="XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log\Инструкция.docx" />
+    <None Include="Properties\key.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:View.AvaloniaUI.Interfaces;assembly=AvaloniaUI"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="View.AvaloniaUI.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaUI - HexViewer"
+        x:Name="Form"
+        WindowState="Normal"
+        WindowStartupLocation="CenterScreen"
+        MinWidth="300"
+        MinHeight="300">
+  
+  <Grid Name="MainGrid">
+    <DockPanel x:Name="Panel" LastChildFill="True">
+      <TextBlock x:Name="FileNameBlock" Text ="{Binding FilePath}" DockPanel.Dock="Top" FontFamily="Candara" FontSize="18" TextAlignment="Center" Background="LightGray" Foreground="Purple" TextWrapping="Wrap"/>
+      <Button x:Name="ChooseFileButton"  Click="OnOpenClicked" DockPanel.Dock="Bottom" FontFamily="Candara" FontSize="18" Content="Open" IsDefault="True" Background="LightGray" Foreground="Purple" Height="30"/>
+      <ScrollBar x:Name="ScrollBar" DockPanel.Dock="Right" Orientation="Vertical" Minimum="0" Maximum="{Binding MaxLines}" Visibility="Visible" Value="{Binding Value, Mode=TwoWay}"/>
+      <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100*"/>
+        <ColumnDefinition Width="200*"/>
+        <ColumnDefinition Width="100*"/>
+      </Grid.ColumnDefinitions>
+        <Border Background = "GhostWhite" BorderBrush="Gainsboro" BorderThickness="1" Grid.Column="0">
+          <TextBlock x:Name="OffsetBlock" Text ="{Binding Offset}" FontFamily="Courier New" FontSize="{Binding FontSize}" LineHeight="{Binding LineHeight}" TextAlignment="Center"/>
+        </Border>
+        <Border Background = "GhostWhite" BorderBrush="Gainsboro" BorderThickness="1" Grid.Column="1">
+          <TextBlock x:Name="HexBlock" Text="{Binding Hex}" Bounds ="{Binding BlockHeight, Mode=OneWayToSource}" LineHeight="{Binding LineHeight}" FontFamily="Courier New" FontSize="{Binding FontSize}" TextAlignment="Center" TextWrapping="Wrap"/>
+        </Border>
+        <Border Background = "GhostWhite" BorderBrush="Gainsboro" BorderThickness="1" Grid.Column="2">
+          <TextBlock x:Name="TextBlock" Text ="{Binding Text}" FontFamily="Courier New" FontSize="{Binding FontSize}" LineHeight="{Binding LineHeight}" TextAlignment="Center"/>
+        </Border>
+      </Grid>
+    </DockPanel>
+  </Grid>
+</Window>
